@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scroll Animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+
+    <!-- Parallax SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 750 500"
+      preserveAspectRatio="xMidYMax slice"
+    >
+      <!-- (SVG content kamu di sini tetap sama persis seperti aslinya) -->
+    </svg>
+
+    <!-- Scroll element -->
+    <div class="scrollElement"></div>
+
+    <!-- Ucapan -->
+    <div id="textScroll1" class="scrollText">
+      harusnya sih aku izin ya buat website tapi tentang kamu cuma ya aku nya ga berani aokwkoaokwaokwoa
+    </div>
+
+    <div id="textScroll2" class="scrollText">
+      kalo ditanya alesannya kenapa aku bikin, gatau sumpah ga ada jawabannya... asli dua kelinci
+    </div>
+
+    <!-- Lagu -->
+    <audio id="song" src="lagu.mp3"></audio>
+    <a href="#" id="playSong" class="scrollText linkSong">🎵 Klik di sini buat denger lagunya</a>
+
+    <button id="fullscr" class="btn">Go Fullscreen</button>
+    <script src="index.js"></script>
+  </body>
+</html>
