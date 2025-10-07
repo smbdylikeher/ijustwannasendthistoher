@@ -11,20 +11,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
 
-    <!-- Parallax SVG (biarkan sama seperti file kamu sebelumnya) -->
+    <!-- 🌄 Parallax SVG dari file aslimu -->
+    <!-- GANTI bagian ini dengan isi SVG lama dari file kamu -->
+    <!-- buka file index.html lama, copy SEMUA isi dari <svg ...> sampai </svg>, 
+         lalu paste di sini menggantikan komentar ini -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 750 500"
       preserveAspectRatio="xMidYMax slice"
     >
-      <!-- isi SVG kamu tetap -->
+      <!-- ⛔ PENTING: tempel isi SVG lama kamu di sini -->
     </svg>
+    <!-- ⛔ sampai sini -->
 
     <!-- Scroll element -->
     <div class="scrollElement"></div>
 
-    <!-- Ucapan -->
+    <!-- ✨ Ucapan -->
     <div id="textScroll1" class="scrollText">
       harusnya sih aku izin ya buat website tapi tentang kamu cuma ya aku nya ga berani aokwkoaokwaokwoa
     </div>
@@ -33,13 +37,28 @@
       kalo ditanya alesannya kenapa aku bikin, gatau sumpah ga ada jawabannya... asli dua kelinci
     </div>
 
-    <!-- Lagu otomatis -->
-    <audio id="song" src="lagu.mp3" autoplay loop></audio>
+    <!-- 🎵 Lagu otomatis -->
+    <audio id="song" src="lagu.mp3" loop></audio>
 
     <!-- Tombol fullscreen -->
     <button id="fullscr" class="btn">Go Fullscreen</button>
 
     <!-- Script utama -->
     <script src="index.js"></script>
+
+    <script>
+      // Autoplay aman (play setelah interaksi pertama)
+      const song = document.getElementById("song");
+      function tryPlay() {
+        song.play().catch(() => {
+          console.log("Autoplay dicegah, coba klik/scroll dulu 😅");
+        });
+        document.removeEventListener("click", tryPlay);
+        window.removeEventListener("scroll", tryPlay);
+      }
+      document.addEventListener("click", tryPlay);
+      window.addEventListener("scroll", tryPlay);
+    </script>
   </body>
 </html>
+
