@@ -11,7 +11,7 @@ ScrollTrigger.create({
   scrub: 3,
 });
 
-// hills animation
+// Hills animation (tetap seperti file kamu)
 scene1.to("#h1-1", { y: 3 * speed, x: 1 * speed, scale: 0.9 }, 0);
 scene1.to("#h1-2", { y: 2.6 * speed, x: -0.6 * speed }, 0);
 scene1.to("#h1-3", { y: 1.7 * speed, x: 1.2 * speed }, 0.03);
@@ -22,7 +22,7 @@ scene1.to("#h1-7", { y: 5 * speed, x: 1.6 * speed }, 0);
 scene1.to("#h1-8", { y: 3.5 * speed, x: 0.2 * speed }, 0);
 scene1.to("#h1-9", { y: 3.5 * speed, x: -0.2 * speed }, 0);
 
-/* Clouds  */
+/* Clouds animation (tetap seperti file kamu) */
 let clouds = gsap.timeline();
 ScrollTrigger.create({
   animation: clouds,
@@ -37,7 +37,7 @@ clouds.to("#cloud2", { x: 1000 }, 0);
 clouds.to("#cloud3", { x: -1000 }, 0);
 clouds.to("#cloud4", { x: -700, y: 25 }, 0);
 
-/* ---------------- Tambahan: Ucapan Scroll ---------------- */
+/* ✨ Tambahan teks scroll */
 gsap.to("#textScroll1", {
   opacity: 1,
   scrollTrigger: {
@@ -78,18 +78,6 @@ gsap.to("#textScroll2", {
   },
 });
 
-/* ---------------- Lagu Otomatis ---------------- */
-const song = document.getElementById("song");
-
-// beberapa browser butuh interaksi dulu, jadi coba play setelah scroll atau klik pertama
-function tryPlay() {
-  song.play().catch(() => {});
-  document.removeEventListener("click", tryPlay);
-  window.removeEventListener("scroll", tryPlay);
-}
-document.addEventListener("click", tryPlay);
-window.addEventListener("scroll", tryPlay);
-
 /* ---------------- Fullscreen Toggle ---------------- */
 let fullscreen;
 let fsEnter = document.getElementById("fullscr");
@@ -110,4 +98,5 @@ fsEnter.addEventListener("click", function (e) {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
 
