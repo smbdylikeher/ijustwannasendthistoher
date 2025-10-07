@@ -5,17 +5,16 @@ html {
   height: 100%;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hilangkan scrollbar */
 body::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* SVG penuhin layar */
 svg {
   display: block;
   width: 100%;
@@ -33,6 +32,7 @@ svg {
   z-index: 0;
 }
 
+/* Tombol fullscreen */
 .btn {
   position: fixed;
   bottom: 5%;
@@ -45,7 +45,6 @@ svg {
   background-color: transparent;
   color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  -webkit-font-smoothing: antialiased;
   cursor: pointer;
   transition: all 0.3s;
   z-index: 11;
@@ -61,3 +60,26 @@ svg {
   background: #ffffff;
   color: #1b1734;
 }
+
+/* Tambahan teks ucapan */
+.scrollText {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 80%;
+  opacity: 0;
+  font-family: "Poppins", sans-serif;
+  z-index: 10;
+}
+
+.linkSong {
+  top: 60%;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
