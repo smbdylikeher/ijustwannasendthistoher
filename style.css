@@ -61,7 +61,7 @@ svg {
   color: #1b1734;
 }
 
-/* Tambahan teks ucapan */
+/* ✨ Tambahan teks ucapan */
 .scrollText {
   position: fixed;
   top: 40%;
@@ -75,5 +75,6 @@ svg {
   font-family: "Poppins", sans-serif;
   z-index: 10;
 }
+
 
 
