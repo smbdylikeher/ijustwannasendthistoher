@@ -14,7 +14,7 @@ body {
   scrollbar-width: none;
 }
 
-/* SVG penuhin layar */
+/* SVG penuh layar */
 svg {
   display: block;
   width: 100%;
@@ -76,10 +76,4 @@ svg {
   z-index: 10;
 }
 
-.linkSong {
-  top: 60%;
-  font-size: 1.1rem;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
